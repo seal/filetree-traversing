@@ -1,6 +1,6 @@
 use colored::Colorize;
 
-use std::{fs, io};
+use std::{fs, io, os::unix::fs::PermissionsExt};
 
 fn menu(base_path: &str) -> io::Result<()> {
     let mut exit = false;
@@ -15,7 +15,12 @@ fn menu(base_path: &str) -> io::Result<()> {
             if !file_metadata.is_file() {
                 println!("{} ", file_name.to_string_lossy().blue(),);
             } else {
-                println!("{} {}", file_name.to_string_lossy(), file_metadata.len());
+                println!(
+                    "{} | Bytes: {} | Perms: {:?} ",
+                    file_name.to_string_lossy(),
+                    file_metadata.len(),
+                    file_metadata.permissions().mode()
+                );
             }
         }
 
@@ -39,13 +44,10 @@ fn menu(base_path: &str) -> io::Result<()> {
 fn main() {
     match menu("/") {
         Ok(()) => {
-            // Handle success if needed
             println!("Menu executed successfully");
         }
         Err(err) => {
-            // Handle error
             eprintln!("Error: {}", err);
         }
     }
 }
-

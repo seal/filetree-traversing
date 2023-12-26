@@ -1,19 +1,19 @@
 
 ---
 
-# File System Traversal in Rust
+# File System in Rust
 
 ## Overview
 
-This Rust program performs a file system traversal, building a tree-like structure to represent the hierarchy of files and directories on a user's computer. The program uses a recursive approach to explore the entire file system, creating a tree structure with nodes representing directories and files.
+A command-line file system explorer written in Rust. This tool allows you to navigate through directories, view directory contents, and display file details.
+
+
 
 ## Features
 
-- **Recursive Traversal:** The program recursively traverses the file system starting from the root directory.
-- **Tree Structure:** Directories and files are represented as nodes in a tree structure.
-- **Depth-First Traversal:** The tree is traversed in a depth-first manner, printing each node's information.
-- **Error Handling:** The program handles errors encountered during traversal, printing error messages and continuing the traversal.
-- **Elapsed Time Measurement:** The program measures and prints the elapsed time for building the tree and completing the traversal.
+- **Colorized Output:** Directories are displayed in blue to easily distinguish them from files.
+- **File Details:** For each file, the tool shows the file name, size in bytes, and permissions.
+- **Interactive Menu:** Navigate through directories by entering the desired folder name.
 
 ## Usage
 
@@ -30,18 +30,10 @@ This Rust program performs a file system traversal, building a tree-like structu
 
    Adjust the program settings or source code as needed.
 
-## Configuration
-
-- **Maximum Depth:**
-  You can configure the `MAX_DEPTH` constant in the source code to limit the depth of the recursive traversal. This helps prevent excessive memory usage.
-
-```rust
-const MAX_DEPTH: usize = 3; // Set your desired maximum depth
-```
 
 ## Dependencies
 
-- This program relies on the Rust standard library and does not have external dependencies.
+- Colored crate
 
 
 ---
