@@ -1,6 +1,6 @@
 [package]
 name = "filetree-traversing"
-version = "0.1.2"
+version = "0.1.3"
 edition = "2021"
 authors = ["Seal <will@kimbell.uk>"]
 description = "A Rust library for working with file trees"
@@ -9,7 +9,7 @@ repository = "https://github.com/seal/filetree-traversing"
 readme = "README.md"
 keywords = ["file", "tree", "directory", "filesystem"]
 categories = ["filesystem"]
-
+include = ["src/main.rs"]
 [dependencies]
 colored = "2.1.0"
 
