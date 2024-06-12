@@ -1,6 +1,6 @@
 [package]
 name = "filetree-traversing"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["Seal <will@kimbell.uk>"]
 description = "A Rust library for working with file trees"
@@ -19,3 +19,8 @@ maintenance = { status = "actively-developed" }
 [package.metadata.docs.rs]
 all-features = true
 rustdoc-args = ["--cfg", "docsrs"]
+
+
+[[bin]]
+name = "filetree-traversing"
+path = "src/main.rs"
