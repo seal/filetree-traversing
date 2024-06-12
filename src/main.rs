@@ -4,7 +4,7 @@
 //! and view information about files, such as file size and permissions.
 
 use colored::Colorize;
-use std::{fs, io, os::unix::fs::PermissionsExt};
+use std::{fs, io};
 /// Displays a menu for navigating and displaying file information in a directory.
 ///
 /// The `menu` function reads the contents of the directory specified by `base_path` and displays
@@ -34,7 +34,6 @@ use std::{fs, io, os::unix::fs::PermissionsExt};
 /// }
 /// ```
 pub fn menu(base_path: &str) -> io::Result<()> {
-    // random comment for v0.1.6
     let mut exit = false;
     while !exit {
         for entry in fs::read_dir(base_path)? {
@@ -50,7 +49,7 @@ pub fn menu(base_path: &str) -> io::Result<()> {
                     "{} | Bytes: {} | Perms: {:?} ",
                     file_name.to_string_lossy(),
                     file_metadata.len(),
-                    file_metadata.permissions().mode()
+                    file_metadata.permissions().readonly()
                 );
             }
         }
