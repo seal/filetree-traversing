@@ -1,5 +1,5 @@
 [package]
-name = "filetree"
+name = "filetree-traversing"
 version = "0.1.0"
 edition = "2021"
 authors = ["Seal <will@kimbell.uk>"]
