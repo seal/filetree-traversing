@@ -35,7 +35,7 @@ use std::{fs, io};
 /// ```
 pub fn menu(base_path: &str) -> io::Result<()> {
     let mut exit = false;
-    // altered 10
+    // altered 11
     while !exit {
         for entry in fs::read_dir(base_path)? {
             let entry = entry?;
