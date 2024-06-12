@@ -2,8 +2,20 @@
 name = "filetree"
 version = "0.1.0"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+authors = ["Seal <will@kimbell.uk>"]
+description = "A Rust library for working with file trees"
+license = "MIT"
+repository = "https://github.com/seal/filetree-traversing"
+readme = "README.md"
+keywords = ["file", "tree", "directory", "filesystem"]
+categories = ["filesystem"]
 
 [dependencies]
 colored = "2.1.0"
+
+[badges]
+maintenance = { status = "actively-developed" }
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]

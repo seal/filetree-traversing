@@ -1,8 +1,39 @@
+//! A module for navigating and displaying file information in a directory.
+//!
+//! This module provides a `menu` function that allows the user to navigate through directories
+//! and view information about files, such as file size and permissions.
+
 use colored::Colorize;
-
 use std::{fs, io, os::unix::fs::PermissionsExt};
-
-fn menu(base_path: &str) -> io::Result<()> {
+/// Displays a menu for navigating and displaying file information in a directory.
+///
+/// The `menu` function reads the contents of the directory specified by `base_path` and displays
+/// the file names, sizes, and permissions. It also allows the user to navigate to subdirectories
+/// by entering the file name.
+///
+/// # Arguments
+///
+/// * `base_path` - The path to the directory to navigate and display file information for.
+///
+/// # Returns
+///
+/// Returns `Ok(())` if the menu executed successfully, or an `Err` if an I/O error occurred.
+///
+/// # Examples
+///
+/// ```
+/// use filetree::menu;
+///
+/// match menu("/") {
+///     Ok(()) => {
+///         println!("Menu executed successfully");
+///     }
+///     Err(err) => {
+///         eprintln!("Error: {}", err);
+///     }
+/// }
+/// ```
+pub fn menu(base_path: &str) -> io::Result<()> {
     let mut exit = false;
 
     while !exit {
@@ -40,7 +71,10 @@ fn menu(base_path: &str) -> io::Result<()> {
 
     Ok(())
 }
-
+/// The main entry point of the program.
+///
+/// This function calls the `menu` function with the root directory ("/") as the starting path.
+/// It prints a success message if the menu executed successfully, or an error message if an error occurred.
 fn main() {
     match menu("/") {
         Ok(()) => {
