@@ -61,7 +61,7 @@
     <Product
         Id='*'
         Name='filetree-traversing'
-        UpgradeCode='29B3756A-9D79-4196-A2DA-EFD311E442F4'
+        UpgradeCode='A558D5A8-8F0E-445E-A9E8-FEED2B4AB6B0'
         Manufacturer='Seal'
         Language='1033'
         Codepage='1252'
@@ -110,7 +110,7 @@
                     -->
 
                     <Directory Id='Bin' Name='bin'>
-                        <Component Id='Path' Guid='561EDFEC-7BC9-47BB-81B3-2764ED30D5A4' KeyPath='yes'>
+                        <Component Id='Path' Guid='49C5279D-8210-46A7-A01F-46092263B9E7' KeyPath='yes'>
                             <Environment
                                 Id='PATH'
                                 Name='PATH'

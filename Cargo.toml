@@ -1,6 +1,6 @@
 [package]
 name = "filetree-traversing"
-version = "0.1.12"
+version = "0.1.13"
 edition = "2021"
 authors = ["Seal <will@kimbell.uk>"]
 description = "A Rust library for working with file trees"
@@ -22,10 +22,11 @@ all-features = true
 rustdoc-args = ["--cfg", "docsrs"]
 
 [package.metadata.wix]
-upgrade-guid = "29B3756A-9D79-4196-A2DA-EFD311E442F4"
-path-guid = "561EDFEC-7BC9-47BB-81B3-2764ED30D5A4"
+upgrade-guid = "A558D5A8-8F0E-445E-A9E8-FEED2B4AB6B0"
+path-guid = "49C5279D-8210-46A7-A01F-46092263B9E7"
 license = false
 eula = false
+
 
 
 [[bin]]
@@ -47,11 +48,11 @@ ci = "github"
 installers = ["shell", "powershell", "npm", "msi"]
 # Target platforms to build apps for (Rust target-triple syntax)
 targets = ["aarch64-apple-darwin", "x86_64-apple-darwin", "x86_64-unknown-linux-gnu", "x86_64-pc-windows-msvc"]
-# Publish jobs to run in CI
-pr-run-mode = "plan"
 # The archive format to use for windows builds (defaults .zip)
 windows-archive = ".tar.gz"
 # The archive format to use for non-windows builds (defaults .tar.xz)
 unix-archive = ".tar.gz"
+# Publish jobs to run in CI
+pr-run-mode = "plan"
 # Whether to install an updater program
 install-updater = true
