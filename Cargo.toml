@@ -1,6 +1,6 @@
 [package]
 name = "filetree-traversing"
-version = "0.1.10"
+version = "0.1.11"
 edition = "2021"
 authors = ["Seal <will@kimbell.uk>"]
 description = "A Rust library for working with file trees"
