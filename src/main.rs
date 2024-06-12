@@ -34,6 +34,7 @@ use std::{fs, io, os::unix::fs::PermissionsExt};
 /// }
 /// ```
 pub fn menu(base_path: &str) -> io::Result<()> {
+    // random comment for v0.1.6
     let mut exit = false;
     while !exit {
         for entry in fs::read_dir(base_path)? {
